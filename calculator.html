@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Calculator project</title>
+<link rel="stylesheet" href="CalCss.css" type="text/css">
+</head>
+
+<body>
+	<div id="body-container">
+		<div id="header-container">
+	<div id="top-section">
+		<input type="text" id="top-field" placeholder="calculate here"/>
+	</div>
+	
+	<div id="bottom-section">
+		<input type="text" id="bottom-field" placeholder="result"/>
+	</div>
+	</div>
+	
+	<div class="button-container">
+		<button id = "seven" onclick="putNumInDisplay(7)">7</button>
+		<button id="eight" onclick="putNumInDisplay(8)">8</button>
+		<button id="nine" onclick="putNumInDisplay(9)">9</button>
+		<button id="clear" onclick="clearEquation()">C</button>
+		<br>
+		<button id="four" onclick="putNumInDisplay(4)">4</button>
+		<button id="five" onclick="putNumInDisplay(5)">5</button>
+		<button id="six" onclick="putNumInDisplay(6)">6</button>
+		<button id="+" onclick="myFunct('+')">+</button>
+		<br>
+		<button id="one" onclick = "putNumInDisplay(1)">1</button>
+		
+		<button id="two" onclick="putNumInDisplay(2)">2</button>
+		<button id="three" onclick="putNumInDisplay(3)">3</button>
+		<button id="-" onclick="myFunct('-')">-</button>
+		<br>
+		<button id="zero" onclick="putNumInDisplay(0)">0</button>
+		<button id="decimal" onclick="putNumInDisplay(.)">.</button>
+		<button id="*" onclick="myFunct('*')">*</button>
+		<br>
+		<button id="sqt" onclick="#">sqt</button>
+		<button id="power" onclick="#">exp</button>
+		
+		<button id="/" onclick="myFunct('/')">/</button>
+		<br>
+		<button id="equal" onclick="calculate()">=</button>
+		
+	</div>
+	</div>
+<script src = "calculator.js">
+	
+</script>
+</body>
+</html>
