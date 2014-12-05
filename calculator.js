@@ -2,7 +2,8 @@
 var numberStore = ["",""];
 var numberIndex = 0;
 var operator;
-var results = 0;
+var result = 0;
+var run_state = 0;
 
 function putNumInDisplay(num1) {
 	console.log("hi");
@@ -15,6 +16,12 @@ function putNumInDisplay(num1) {
 }
 
 function myFunct(op) {
+	if(run_state==1){
+		numberStore[0] = document.querySelector("#bottom-field").value;
+		topfield.value = document.querySelector("#bottom-field").value;
+		bottomfield.value='';
+		//move result to top and clear result, carry on as normal
+	}
 	numberIndex = 1;
 	operator = op;
 	document.querySelector('#top-field').value += op;
@@ -27,6 +34,7 @@ function clearEquation(){
 	numberStore = ["",""];
 	numberIndex = 0;
 	document.querySelector('#bottom-field').value = "";
+	run_state = 0;
 }
 
 function calculate(){
@@ -53,6 +61,8 @@ function calculate(){
 	console.log(result);
 	
 	displayResults();
+	run_state = 1;
+	
 }
 
 
@@ -60,3 +70,9 @@ function displayResults() {
 	document.querySelector("#bottom-field").value = result;
 	
 }
+function moveResult() {
+	//if (operator == "+", "-", "*", "/"){
+	document.querySelector("#top-field").value = result;
+	document.querySelector("#bottom-field"). value = "";
+}
+
